@@ -3,7 +3,7 @@ This project looks at the problem of simplifying the experience of creating K8s 
 
 ![Flow](flow.png)
 
-This GitHub Org contains the source code for all the components in the above flow (shown as elipsses). In particular it contains the following repos.
+Our [GitHub Org](https://github.com/shift-left-netconfig) contains the source code for all the components in the above flow (shown as elipsses). In particular it contains the following repos.
 - [cluster-topology-analyzer](https://github.com/shift-left-netconfig/cluster-topology-analyzer) - Scans a GitHub repo and extracts required network links.
 - [netpol-synthesizer](https://github.com/shift-left-netconfig/netpol-synthesizer) - Synthesizes a set of K8s NetworkPolicies from the list of requried network links and a set of baseline requirements.
 - [network-config-analyzer](https://github.com/shift-left-netconfig/network-config-analyzer) - Allows showing synthesized connectivity as a set of firewall rules. Can also produce connectivity diff between two network configurations.
