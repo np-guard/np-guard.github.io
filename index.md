@@ -1,5 +1,5 @@
 ###  Shift-left Automatic Generation of Network Policies
-This project looks at the problem of simplifying the experience of creating K8s NetworkPolicies for zero-trust environments. Recognizing how hard it is for users to create and manage K8s NetworkPolicies to enable just the right amount of connectivity (not more or less), we propose a solution to automating the generation of NetworkPolicies without having to run the applications' code. 
+This project looks at the problem of simplifying the experience of creating K8s NetworkPolicies for zero-trust environments. Recognizing how hard it is for users to create and manage K8s NetworkPolicies to enable just the right amount of connectivity (not more or less), we propose a solution to automating the generation of NetworkPolicies without having to run the applications' code. Our solution can be integrating into the application CI/CD pipeline. Its overall flow is presented below.
 
 ![Flow](flow.png)
 
