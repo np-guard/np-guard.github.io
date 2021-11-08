@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 title: shift-left-netconfig
 description: Shift-left Automation for Generating and Maintaining Kubernetes Network Policies
+google_analytics: UA-212214667-1
