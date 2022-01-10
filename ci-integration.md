@@ -1,4 +1,4 @@
-There are several options to integrate the various components in this project into a useful CI/CD pipeline. One possible option is depiced below.
+There are several options to integrate the various components in this project into a useful CI/CD pipeline. One possible option is depicted below.
 
 ![CI-integration](ci-integration-option.png)
 
