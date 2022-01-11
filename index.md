@@ -14,4 +14,4 @@ Our [GitHub Org](https://github.com/np-guard) contains the source code for all c
 - [baseline-rules-verifier](https://github.com/np-guard/baseline-rules-verifier) - Checks whether synthesized connectivity satisifies a set of baseline requirements.
 - [baseline-rules](https://github.com/np-guard/baseline-rules) - Contains several [examples](https://github.com/np-guard/baseline-rules/tree/master/examples) for baseline requirements.
 
-The overall flow is demoed on [an example application](https://github.com/np-guard/microservices-demo). See the [step-by-step screenplay](https://github.com/np-guard/microservices-demo/blob/master/POC-screenplay.md) of the demo.
+Check [CI Integration](https://np-guard.github.io/ci-integration.html) to learn how to integrate the above components into a CI/CD pipeline.
