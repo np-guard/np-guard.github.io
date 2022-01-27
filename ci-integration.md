@@ -18,3 +18,5 @@ To enable CI/CD integrations, this project provides several GitHub Actions as we
 |Connectivity verification|[link](https://github.com/marketplace/actions/k8s-networkpolicy-verification)|[link](https://github.com/np-guard/baseline-rules-verifier/tree/master/tekton)|
 
 An example implementation of the CI pipeline depicted above for a [demo Kubernetes application](https://github.com/np-guard/online-boutique) using our GitHub Actions can be found [here](https://github.com/np-guard/online-boutique/tree/master/.github/workflows). See a resulting PR [here](https://github.com/np-guard/online-boutique/pull/46).
+
+An example implementation of the CI pipeline depicted above for a [demo Kubernetes application](https://github.com/np-guard/online-boutique-tekton) using our Tekton Tasks can be found [here](https://github.com/np-guard/online-boutique-tekton/tree/main/tekton). See a resulting PR [here](https://github.com/np-guard/online-boutique-tekton/pull/3).
