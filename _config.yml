@@ -20,7 +20,6 @@
 
 title: NP-Guard
 description: Shift-left Automation for Generating and Maintaining Kubernetes Network Policies
-baseurl: /np-guard
 url: https://np-guard.github.io
 permalink: /:categories/:title
 
