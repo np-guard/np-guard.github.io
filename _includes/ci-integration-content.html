@@ -1,0 +1,86 @@
+
+
+<div class="column col-12 col-sm-12 ">
+	<h2>CI Integrarion</h2>
+  <p>There are several options for integrating the various components in this project into a useful CI/CD pipeline. One possible option is depicted below.</p>
+	<p align="center"><a href="assets/diagram-1-02.png" target="_blank"><img src="assets/diagram-1-02.png" width="50%" /></a></p>
+</div>
+<div class="column col-6 col-sm-12 p-8 mb-8 col-mx-auto">
+	<p>In this flow, the Analysis and Synthesis phase is manually triggered by the DevOps team. This results in a new PR, containing the synthesized network policies. Opening the PR triggers a run of the other components, which provide the connectivity map, connectivity diff, and policy verification results as PR comments.</p>
+
+<p>To enable CI/CD integrations, this project provides several GitHub Actions as well as Tekton Tasks. Use the table below to get the relevant CI-stage encapsulation for your needs.</p>
+
+
+<table style=" border-spacing: 0;">
+	<thead  style="border: 1px solid #D3D3D3; padding: 5px;">
+<tr>
+<th width="50%" style="border: 1px solid #D3D3D3; padding: 5px;">
+<b>CI stage</b>
+</th>
+<th width="25%" style="border: 1px solid #D3D3D3; padding: 5px;">
+<b>GitHub Action</b>
+</th>
+<th width="25%" style="border: 1px solid #D3D3D3; padding: 5px;">
+<b>Tekton Task</b>
+</th>
+</tr>
+	</thead>
+		<tbody>
+<tr>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+Analysis & Synthesis
+</td>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+<a href="https://github.com/marketplace/actions/k8s-networkpolicy-auto-synthesis" target="blank">link</a>
+</td>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+<a href="https://github.com/np-guard/netpol-synthesizer/tree/master/tekton" target="blank">link</a>
+</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+Connectivity map
+</td>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+<a href="https://github.com/marketplace/actions/k8s-networkpolicy-connectivity-report" target="blank">link</a>
+</td>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+<a href="https://github.com/np-guard/network-config-analyzer/tree/master/tekton#k8s-netpol-report" target="blank">link</a>
+</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+Connectivity diff
+</td>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+<a href="https://github.com/marketplace/actions/k8s-networkpolicy-diff" target="blank">link</a>
+</td>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+<a href="https://github.com/np-guard/network-config-analyzer/tree/master/tekton#k8s-netpol-diff" target="blank">link</a>
+</td>
+</tr>
+
+<tr>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+Connectivity verification
+</td>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+<a href="https://github.com/marketplace/actions/k8s-networkpolicy-verification" target="blank">link</a>
+</td>
+<td style="border: 1px solid #D3D3D3; padding: 5px;">
+<a href="https://github.com/np-guard/baseline-rules-verifier/tree/master/tekton" target="blank">link</a>
+</td>
+</tr>
+	</tbody>
+</table>
+
+
+
+</div>
+<div class="column col-6 col-sm-12 p-8 mb-8 col-mx-auto">
+<p>A sample implementation of the CI pipeline depicted above for a <a href="https://github.com/np-guard/online-boutique" target="blank">demo Kubernetes application</a> using our <b>GitHub</b> Actions can be found <a href="https://github.com/np-guard/online-boutique/tree/master/.github/workflows" target="blank">here</a>. See a resulting PR <a href="https://github.com/np-guard/online-boutique/pull/46" target="blank">here</a>.</p>
+
+<p>A sample implementation of the CI pipeline depicted above for a <a href="https://github.com/np-guard/online-boutique-tekton" target="blank">demo Kubernetes application</a> using our <b>Tekton</b> Tasks can be found <a href="https://github.com/np-guard/online-boutique-tekton/tree/main/tekton" target="blank">here</a>. See a resulting PR <a href="https://github.com/np-guard/online-boutique-tekton/pull/3" target="blank">here</a>.</p>
+</div>
