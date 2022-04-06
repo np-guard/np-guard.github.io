@@ -1,0 +1,23 @@
+
+<div class="column col-12 col-sm-12 ">
+  <p>This project seeks to simplify the experience of creating and maintaining Kubernetes (K8s) network policies [I realize that K8s documentation often writes this as one double-capitalized word, i.e., NetworkPolicy. However, they also write it often as two non-capitalized words, with a space between the words. It seems that they use the compound one-word form for a specific example or use of the construct, and not when talking about it in general. That’s how I’ve edited this text] for zero-trust environments. When creating and managing K8s network policies, it can be difficult for users to enable just the right amount of connectivity. To help meet this challenge, we propose a solution for automating the generation of network policies without having to run the applications’ code. Our solution can be integrated into the application’s CI/CD pipeline, ensuring network policies get updated whenever the required cluster connectivity changes. The overall flow of the solution is presented below.</p>
+	<p align="center"><a href="assets/diagram-1-01.png" target="_blank"><img src="assets/diagram-1-01.png" width="90%" /></a></p>
+</div>
+<div class="column col-6 col-sm-12 p-8 mb-8 col-mx-auto">
+	<p>The flow consists of two stages:</p>
+<ul>
+    <li><b>Automatic synthesis stage</b> - Analyzes application configuration files and takes into account existing network configuration, actual cluster traffic, and baseline requirements. This stage of the flow also  proposes updated network connectivity restrictions in the form of NetworkPolicy resources.</li>
+    <li><b>Review and modify stage</b> - The proposed network connectivity is presented to the DevOps team for their review. The presentation can be graphic, a concise textual report, or simply the actual NetworkPolicy YAML files. The presentation also includes a semantic diff of connectivity changes from the currently deployed configuration. Users can make changes to the proposed connectivity and these changes are then checked against baseline requirements. Only approved changes get deployed to the live cluster.</li>
+</ul>
+</div>
+<div class="column col-6 col-sm-12 p-8 mb-8 col-mx-auto">
+<p>Our main<a href="https://github.com/np-guard" target="blank">GitHub Org page</a> contains the source code for all components in the above flow (shown as solid circles). In particular, it contains the following repos:</p>
+<ul>
+    <li><a href="https://github.com/np-guard/cluster-topology-analyzer" target="blank">cluster-topology-analyzer</a> - Scans a GitHub repo and extracts required network links from configuration files.</li>
+    <li><a href="https://github.com/np-guard/netpol-synthesizer" target="blank">netpol-synthesizer</a> - Synthesizes a set of K8s network policies from the list of required network links and a set of baseline requirements.</li>
+    <li><a href="https://github.com/np-guard/network-config-analyzer" target="blank">network-config-analyzer</a> - Allows showing synthesized connectivity as a set of firewall rules. Can also produce connectivity diff between two network configurations.</li>
+    <li><a href="https://github.com/np-guard/baseline-rules-verifier" target="blank">baseline-rules-verifier</a> - Checks whether synthesized connectivity satisfies a set of baseline requirements.</li>
+    <li><a href="https://github.com/np-guard/baseline-rules" target="blank">baseline-rules</a> - Contains several examples of baseline requirements.</li>
+</ul>
+<p>See <a href="ci-integration.html" target="blank">CI Integration</a> to learn how to integrate the above components into a CI/CD pipeline.</p>
+</div>
